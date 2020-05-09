@@ -14,9 +14,9 @@ void setUpUI(WidgetTesterCallback cb) {
   tearDown(() {
     assert(_setUpUIs.contains(setUpFunction));
     assert(
-    setUpFunction.ran,
-    "A setUpUI function wasn't run. Likely, this means that testWidgets was used to create the test instead of testUI.\n"
-        "${setUpFunction.stackTrace}",
+      setUpFunction.ran,
+      "A setUpUI function wasn't run. Likely, this means that testWidgets was used to create the test instead of testUI.\n"
+      "${setUpFunction.stackTrace}",
     );
     _setUpUIs.remove(setUpFunction);
   });
@@ -38,9 +38,9 @@ void tearDownUI(WidgetTesterCallback cb) {
   tearDown(() {
     assert(_tearDownUIs.contains(tearDownFunction));
     assert(
-    tearDownFunction.ran,
-    "A tearDownUI function wasn't run. Likely, this means that testWidgets was used to create the test instead of testUI.\n"
-        "${tearDownFunction.stackTrace}",
+      tearDownFunction.ran,
+      "A tearDownUI function wasn't run. Likely, this means that testWidgets was used to create the test instead of testUI.\n"
+      "${tearDownFunction.stackTrace}",
     );
     _tearDownUIs.remove(tearDownFunction);
   });
@@ -56,17 +56,17 @@ void tearDownUI(WidgetTesterCallback cb) {
 /// See [testWidgets] for details
 @isTest
 void testUI(
-    String description,
-    WidgetTesterCallback callback, {
-      bool skip = false,
-      Timeout timeout,
-      Duration initialTimeout,
-      bool semanticsEnabled = true,
-      TestVariant<Object> variant = const DefaultTestVariant(),
-    }) {
+  String description,
+  WidgetTesterCallback callback, {
+  bool skip = false,
+  Timeout timeout,
+  Duration initialTimeout,
+  bool semanticsEnabled = true,
+  TestVariant<Object> variant = const DefaultTestVariant(),
+}) {
   testWidgets(
     description,
-        (tester) async {
+    (tester) async {
       for (final s in _setUpUIs) await s(tester);
       await callback(tester);
       for (final t in _tearDownUIs.reversed) await t(tester);
