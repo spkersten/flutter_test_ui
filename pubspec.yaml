@@ -1,7 +1,7 @@
 name: flutter_test_ui
 description: Wrapper for flutter_test that adds a tester argument to setUp and tearDown functions
 version: 1.0.0
-author: Sander Kersten
+homepage: https://github.com/spkersten/flutter_test_ui
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
