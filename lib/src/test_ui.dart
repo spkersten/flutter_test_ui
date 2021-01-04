@@ -59,10 +59,10 @@ void testUI(
   String description,
   WidgetTesterCallback callback, {
   bool skip = false,
-  Timeout timeout,
-  Duration initialTimeout,
+  Timeout? timeout,
+  Duration? initialTimeout,
   bool semanticsEnabled = true,
-  TestVariant<Object> variant = const DefaultTestVariant(),
+  TestVariant<Object?> variant = const DefaultTestVariant(),
 }) {
   testWidgets(
     description,
