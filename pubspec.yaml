@@ -1,10 +1,10 @@
 name: flutter_test_ui
 description: Wrapper for flutter_test that adds a tester argument to setUp and tearDown functions
-version: 2.0.0-nullsafety.0
+version: 2.0.0
 homepage: https://github.com/spkersten/flutter_test_ui
 
 environment:
-  sdk: '>=2.12.0-133.2.beta <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
