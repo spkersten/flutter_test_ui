@@ -73,7 +73,7 @@ void testUI(
     },
     skip: skip,
     timeout: timeout,
-    initialTimeout: initialTimeout,
+    //initialTimeout: initialTimeout,
     semanticsEnabled: semanticsEnabled,
     variant: variant,
   );
